@@ -14,16 +14,16 @@ Reg,width : uint,,in : BitIn[width],width options:
 ,,,out : Bit[width],"1,16"
 ,,,,
 ,,,,
-IO,width : uint,,in : BitIn[width],
-,,,out : Bit[width],
-,,,en : BitIn,
+IO,width : uint,mode : string,in : BitIn[width],mode options:
+,,,out : Bit[width],"i,o"
+,,,,
 ,,,,
 ,,,,
 Mem,width : uint,mode : string,read.data : Bit[width],width options:
-,,,read.addr : BitIn[width],16
-,,,read.en : BitIn,mode options:
-,,,read.empty : Bit,"ram,fifo"
-,,,write.data : BitIn[width],
-,,,write.addr : BitIn[width],
+,depth : uint,,read.addr : BitIn[width],16
+,,,read.en : BitIn,depth
+,,,read.empty : Bit,"512, 1024, 2048"
+,,,write.data : BitIn[width],mode options:
+,,,write.addr : BitIn[width],"ram,fifo"
 ,,,write.en : BitIn,
 ,,,write.full : Bit,
