@@ -1,0 +1,29 @@
+Name,GenParams,ConfigParams,Interface,Options
+,,,,
+PE,width : uint,op : string,data.in[numin] : BitIn[width],width options:
+,numin : uint,,data.out : Bit[width],16
+,,,bit.in[numin] : BitIn,numin options:
+,,,bit.out : Bit,"2,3"
+,,,,op options:
+,,,,see stdlib
+,,,,
+Const,width : uint,,out : Bit[width],width options:
+,,,,"1,16"
+,,,,
+Reg,width : uint,,in : BitIn[width],width options:
+,,,out : Bit[width],"1,16"
+,,,,
+,,,,
+IO,width : uint,,in : BitIn[width],
+,,,out : Bit[width],
+,,,en : BitIn,
+,,,,
+,,,,
+Mem,width : uint,mode : string,read.data : Bit[width],width options:
+,,,read.addr : BitIn[width],16
+,,,read.en : BitIn,mode options:
+,,,read.empty : Bit,"ram,fifo"
+,,,write.data : BitIn[width],
+,,,write.addr : BitIn[width],
+,,,write.en : BitIn,
+,,,write.full : Bit,
