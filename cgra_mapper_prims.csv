@@ -7,7 +7,7 @@ PE,width : uint,op : string,data.in[numin] : BitIn[width],width options:
 ,,,,op options:
 ,,,,see stdlib
 ,,,,
-Const,width : uint,,out : Bit[width],width options:
+Const,width : uint,value : uint,out : Bit[width],width options:
 ,,,,"1,16"
 ,,,,
 Reg,width : uint,,in : BitIn[width],width options:
