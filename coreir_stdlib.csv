@@ -2,8 +2,8 @@ Category,Name(s),GenParams,ConfigParams,In interface,Out interface,GenParam Inva
 Bitwise,not,width : uint,,in : BitIn[width],out : Bit[width],,
 ,"and,or,xor",width : uint,,in[2] : BitIn[width],out : Bit[width],,
 ,"andr,orr,xorr",width : uint,,in[2] : BitIn[width],out : Bit,,Bitwise Reduce
-,"shl,lshr,ashr","width : uint, x : uint",,in : BitIn[width],out : Bit[width],,Static shift by x
-,"dshl,dlshr,,dashr ",width : uint,,in[2] : BitIn[width],out : Bit[width],,Dynamic shift
+,"shl,lshr,ashr","width : uint, shiftbits : uint",,in : BitIn[width],out : Bit[width],,Static shift by x
+,"dshl,dlshr,dashr ",width : uint,,in[2] : BitIn[width],out : Bit[width],,Dynamic shift
 ,,,,,,,
 Arithmetic,neg,width : uint,,in : BitIn[width],out : Bit[width],,
 ,"add,sub,mul",width : uint,,in[2] : BitIn[width],out : Bit[width],,
