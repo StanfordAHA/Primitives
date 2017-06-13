@@ -19,11 +19,11 @@ IO,width : uint,mode : string,in : BitIn[width],mode options:
 ,,,,
 ,,,,
 ,,,,
-Mem,width : uint,mode : string,read.data : Bit[width],width options:
-,depth : uint,,read.addr : BitIn[width],16
-,,,read.en : BitIn,depth
-,,,read.empty : Bit,"512, 1024, 2048"
-,,,write.data : BitIn[width],mode options:
-,,,write.addr : BitIn[width],"ram,fifo"
-,,,write.en : BitIn,
-,,,write.full : Bit,
+Mem,width : uint,mode : string,addr : BitIn[width],width options:
+,depth : uint,,rdata : Bit[Width],16
+,,,ren : BitIn,depth
+,,,empty : Bit,"512, 1024, 2048"
+,,,wdata : BitIn[width],mode options:
+,,,wen : BitIn,"ram,fifo"
+,,,full,
+,,,,
