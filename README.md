@@ -1,4 +1,4 @@
-##This repo is for defining primtiives/interfaces associated with AHA.
+## This repo is for defining primtiives/interfaces associated with AHA.
 
 This includes:  
 Rigel Higher order primitives  
@@ -8,7 +8,7 @@ CGRA primitives
 
 
 
-##Notation Guide:
+## Notation Guide:
 
 ```
 Base types: (out direction, in direction)
