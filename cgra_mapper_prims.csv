@@ -24,6 +24,6 @@ Mem,width : uint,mode : string,addr : BitIn[width],width options:
 ,,,ren : BitIn,depth
 ,,,empty : Bit,"512, 1024, 2048"
 ,,,wdata : BitIn[width],mode options:
-,,,wen : BitIn,"ram,fifo"
+,,,wen : BitIn,"ram,fifo,linebuffer"
 ,,,full,
 ,,,,
