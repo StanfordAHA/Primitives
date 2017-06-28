@@ -1,0 +1,15 @@
+Port Names,Direction /bits,Used in Linebuffer,Used in Fifo mode,Used in Ram mode
+addr,input [15:0],0,0,1
+wdata,input [15:0],1,1,1
+wen,input,1,1,1
+rdata,output [15:0],1,1,1
+ren,input,0,1,1
+almost_full,output,0,1,0
+valid,output,1,1,0
+,,,,
+Configs,Possible values,Used in Linebuffer,Used in Fifo mode,Used in Ram mode
+mode,"“linebuffer”,”fifo”,ram”",1,1,1
+fifo_depth,<=1024,1,1,0
+almost_full_cnt,<=1024,0,1,0
+chain_en,"1,0",1,0,0
+tile_en,"1,0",1,1,1
