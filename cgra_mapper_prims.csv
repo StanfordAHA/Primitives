@@ -1,29 +1,47 @@
-Name,GenParams,ConfigParams,Interface,Options
-,,,,
-PE,width : uint,op : string,data.in[numin] : BitIn[width],width options:
-,numin : uint,,data.out : Bit[width],16
-,,,bit.in[numin] : BitIn,numin options:
-,,,bit.out : Bit,"2,3"
-,,,,op options:
-,,,,see stdlib
-,,,,
-Const,width : uint,value : uint,out : Bit[width],width options:
-,,,,"1,16"
-,,,,
-Reg,width : uint,,in : BitIn[width],width options:
-,,,out : Bit[width],"1,16"
-,,,,
-,,,,
-IO,width : uint,mode : string,in : BitIn[width],mode options:
-,,,out : Bit[width],"i,o"
-,,,,
-,,,,
-,,,,
-Mem,width : uint,mode : string,addr : BitIn[width],width options:
-,depth : uint,,rdata : Bit[Width],16
-,,,ren : BitIn,depth
-,,,empty : Bit,"512, 1024, 2048"
-,,,wdata : BitIn[width],mode options:
-,,,wen : BitIn,"ram,fifo,linebuffer"
-,,,full,
-,,,,
+Namespace,Name,ConfigParams,Interface,Comments,,,,,,,,,,,,
+cgralib,PE,op : string,data.in[2] : BitIn[16],Check out Artem’s PE Doc,,,,,,,,,,,,
+,,LUT_value : int,data.out : Bit[16],,,,,,,,,,,,,
+,,data0_mode : string,bit.in[3] : BitIn,,,,,,,,,,,,,
+,,data0_value : int,bit.out : Bit,,,,,,,,,,,,,
+,,data1_mode : string,,,,,,,,,,,,,,
+,,data1_init : int,,,,,,,,,,,,,,
+,,bit0_mode : string,,,,,,,,,,,,,,
+,,bit0_value : bool,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+cgralib,DataPE,op : string,data.in[2] : BitIn[16],,,,,,,,,,,,,
+,,LUT_value : int,data.out : Bit[16],,,,,,,,,,,,,
+,,data0_mode : string,,,,,,,,,,,,,,
+,,data0_value : int,,,,,,,,,,,,,,
+,,data1_mode : string,,,,,,,,,,,,,,
+,,data1_init : int,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+cgralib,BitPE,LUT_value : int,bit.in[3] : BitIn,,,,,,,,,,,,,
+,,bit0_mode : string,bit.out : Bit,,,,,,,,,,,,,
+,,bit0_value : bool,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+cgralib,IO,mode : string,in : BitIn[16],mode options:,,,,,,,,,,,,
+,,,out : Bit[16],"i,o",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+cgralib,BitIO,mode : string,in : BitIn[16],mode options:,,,,,,,,,,,,
+,,,out : Bit[16],"i,o",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+cgralib,Mem,mode : string,raddr : BitIn[16],See CGRA_mem.csv,,,,,,,,,,,,
+,,fifo_depth : int,rdata : Bit[16],,,,,,,,,,,,,
+,,almost_full_cnt : int,ren : BitIn,,,,,,,,,,,,,
+,,,waddr : BitIn[16],,,,,,,,,,,,,
+,,,wdata : BitIn[16],,,,,,,,,,,,,
+,,,wen : BitIn,,,,,,,,,,,,,
+,,,almost_full : Bit,,,,,,,,,,,,,
+,,,valid : Bit,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+coreir,const,value : uint,out : Bit[16],Will be depreicated,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+coreir,bitconst,value : bool,out : Bit,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+coreir,reg,init : int,in : BitIn[16],Init will be depreciated,,,,,,,,,,,,
+,,,out : Bit[16],,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+coreir,bitreg,init : bool,in : BitIn,,,,,,,,,,,,,
+,,,out : Bit,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
