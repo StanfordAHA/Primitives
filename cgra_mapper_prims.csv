@@ -13,8 +13,8 @@ cgralib,PE,op_kind : string,data.in[2] : BitIn[16],Check out Artem’s PE Doc
 cgralib,IO,mode : string,in : BitIn[16],mode options:
 ,,,out : Bit[16],"i,o"
 ,,,,
-cgralib,BitIO,mode : string,in : BitIn[16],mode options:
-,,,out : Bit[16],"i,o"
+cgralib,BitIO,mode : string,in : BitIn,mode options:
+,,,out : Bit,"i,o"
 ,,,,
 cgralib,Mem,mode : string,raddr : BitIn[16],See CGRA_mem.csv
 ,,fifo_depth : int,rdata : Bit[16],
