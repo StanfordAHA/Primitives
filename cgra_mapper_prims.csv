@@ -1,12 +1,14 @@
 Namespace,Name,ConfigParams,Interface,Comments
-cgralib,PE,op : string,data.in[2] : BitIn[16],Check out Artem’s PE Doc
-,,LUT_value : int,data.out : Bit[16],
-,,data0_mode : string,bit.in[3] : BitIn,optype options
-,,data0_value : int,bit.out : Bit,"bit,data,combined"
+cgralib,PE,op_kind : string,data.in[2] : BitIn[16],Check out Artem’s PE Doc
+,,alu_op : string,data.out : Bit[16],
+,,lut_value : int,bit.in[3] : BitIn,op_kind options
+,,data0_mode : string,bit.out : Bit,"bit,data,combined"
+,,data0_value : int,,
 ,,data1_mode : string,,
 ,,data1_init : int,,
 ,,bit0_mode : string,,
 ,,bit0_value : bool,,
+,,,,
 ,,,,
 cgralib,IO,mode : string,in : BitIn[16],mode options:
 ,,,out : Bit[16],"i,o"
@@ -31,4 +33,3 @@ coreir,reg,init : int,in : BitIn[16],Init will be depreciated
 ,,,out : Bit[16],
 ,,,,
 coreir,bitreg,init : bool,in : BitIn,
-,,,out : Bit,
