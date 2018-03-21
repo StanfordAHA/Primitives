@@ -4,8 +4,9 @@ wdata,input [15:0],1,1,1
 wen,input,1,1,1
 raddr,input [15:0],0,0,1
 rdata,output [15:0],1,1,1
-ren,input,0,1,1
-almost_full,output,0,1,0
+ren,input,1,1,1
+almost_full,output,1,1,0
+almost_empty,output,1,1,0
 valid,output,1,1,0
 ,,,,
 Configs,Possible values,Used in Linebuffer,Used in Fifo mode,Used in Ram mode
