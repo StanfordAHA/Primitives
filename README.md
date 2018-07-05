@@ -1,4 +1,4 @@
-## This repo is for defining primtiives/interfaces associated with AHA.
+## This repo is for defining primitives/interfaces associated with AHA.
 
 This includes:  
 Rigel Higher order primitives  
